@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Welcome!{% endblock %}</title>
+        <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}"/>
+        <link rel="stylesheet" href="{{ asset('css/menu.css') }}"/>
+        <link href="/assets/fontawesome/web-fonts-with-css/css/fontawesome-all.css" rel="stylesheet" />
+        <script defer src="/assets/fontawesome/svg-with-js/js/fontawesome-all.js"></script>
+
+    {% block stylesheets %}{% endblock %}
+    <style>
+       
+    </style>
+</head>
+<body>
+    <div id="menu" data-display="on">
+        <div id="user" class="row">
+            <div class="col-sm-10 text-center my-auto">
+                P.PICHET
+            </div>
+            <div class="col-sm-2 text-center my-auto">
+                <a href="#" class="btn"><i class="fas fa-sign-out-alt"></i></a>
+            </div>
+        </div>
+        <ul class="list-unstyled">
+            <li><a href="#clients-liste" class="menu-accordeon collapsed" data-toggle="collapse">Clients</a></li>
+            <ul id="clients-liste" class="list-unstyled collapse">
+                <li>first</li>
+                <li>second</li>
+                <li>third</li>
+
+            </ul>
+
+            <li>second</li>
+            <li>third</li>
+
+        </ul>
+
+    </div>
+    <div id="content">
+        <div id="toogle-bar">
+            <a href="#" id="dropdown-menu" class="btn"><i class="fas fa-bars"></i></a>
+            <form action="" method="post" class="float-right">
+                <div class="input-group">
+                    <input type="text" name="search" id="search" class="form-control">
+                    <div class="input-group-addon"><i class="fas fa-search"></i></div>
+                </div>
+                
+            </form>
+        </div>   
+    {% block body %}{% endblock %}
+
+</div>
+<script src="{{ asset('js/jquery-3.3.1.min.js') }}" ></script>
+<script src="{{ asset('js/bootstrap.min.js') }}" ></script>
+{% block javascripts %}{% endblock %}
+<script src="{{ asset('js/menu.js') }}"></script>
+</body>
+</html>

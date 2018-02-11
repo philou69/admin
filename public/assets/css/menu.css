@@ -1,0 +1,94 @@
+/* 
+Definition des tailles et de la position de menu et content
+Le body occupe au minimum l'écran avec min-height et la largeur de l'écran avec inherit en width
+Le menu est quand à lui positionner en fixed en haut et à gauche avec l'hauteur  de l'écran minimum (min-height) et 20vw de largeur fixe
+Le contenu au minimum toute la hauteur (min-heigth) et larguer de body avec un margin de 20vw
+*/
+body {
+    min-height: 100vh;
+    width: inherit;
+    margin: 0;
+    height: 100%;
+    position: relative;
+}
+
+#menu {
+    width: 20vw;
+    background-color: #222d32;
+    position: absolute;
+    top:0;
+    left: 0;
+    bottom: 0;
+    z-index: 255;
+    color: white;
+}
+/* 
+    Style sur les lignes du menu
+    Suppresion des margin et padding  de bootstrap
+*/
+#menu .row{
+    margin: 0;
+}
+#menu #user {
+    height: 40px;
+}
+ #menu #user .col-sm-2{
+    padding: 0;
+}
+
+#content {
+    min-height: 100vh;
+    width: inherit;
+    background-color: #ecf0f5;            
+    margin-left: 20vw;
+    height: 150vh;
+}
+
+/* Style de la barre de navigation haute 
+    hauteur de 40px et toute largeur de content
+*/
+#toogle-bar {
+    width: 100%;
+    height: 40px;
+    background-color: #3c8dbc;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+/* Style pour la liste du menu */
+.menu-accordeon {
+    display:block;
+    width: 100%;
+}
+/*------ Style des fleches du dropdown -------*/
+/* https://medium.com/@tylercubell/font-awesome-5-and-css-pseudo-elements-a061a832e236*/
+.menu-accordeon:after {
+  content: "\f106";
+  font-family: "Font Awesome 5 Free";
+  font-style: normal;
+  font-variant-caps: normal;
+  font-variant-ligatures: normal;
+  font-weight: 900;
+  height: 24px;
+  line-height: 24px;
+  text-rendering: auto;
+  width: 16px;
+  -webkit-font-smoothing: antialiased;
+  float: right;
+}
+
+.menu-accordeon.collapsed:after {
+  content: "\f107";
+  font-family: "Font Awesome 5 Free";
+  font-style: normal;
+  font-variant-caps: normal;
+  font-variant-ligatures: normal;
+  font-weight: 900;
+  height: 24px;
+  line-height: 24px;
+  text-rendering: auto;
+  width: 16px;
+  -webkit-font-smoothing: antialiased;
+  float: right;
+}
+/*------ Fin du Style des fleches du dropdown -------*/
+
